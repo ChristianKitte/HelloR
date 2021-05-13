@@ -2,7 +2,7 @@
 ### Data Science SS 21
 ### Christian Kitte 
 
-Im folgenden ist die Lösung der folgenden Aufgaben zu sehen:
+An dieser Stelle ist die Lösung der folgenden Aufgaben zu sehen:
 
 1) Write a program to guess a number in between0 and 100!
 Hence the computer invents the number and the user = you tries to guess it!
