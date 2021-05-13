@@ -8,7 +8,11 @@ play <- function( ) {
   outputString <- ""
   inputValue <- -1
   oldInputValue <- -1
-  currentValue <- floor( runif( 1, 1, 100 ) )
+
+  # According to:
+  # https://stat.ethz.ch/R-manual/R-devel/library/stats/html/Uniform.html
+  # We have to adjust our min and max values to min=1 an max =101 to get a real range of 1 to 100.
+  currentValue <- floor( runif( 1, 1, 101 ) )
 
   # Until we guess the number...
   while ( currentValue != inputValue ) {
@@ -66,7 +70,7 @@ getInteger <- function( valueToTest ) {
 # Writes a welcome string to the console
 writeStartString <- function( ) {
   writeLines( "Willkommen zu diesem Spiel." )
-  writeLines( "Ihre Aufgabe ist es, eine Zahl zwischen 1 und 20 zu erraten!" )
+  writeLines( "Ihre Aufgabe ist es, eine Zahl zwischen 1 und 100 zu erraten!" )
   writeLines( "Um das Spiel zu beenden, geben Sie q ein..." )
   writeLines( "" )
 }
