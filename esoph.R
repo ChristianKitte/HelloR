@@ -38,6 +38,10 @@ dsAttribs <- attributes( esoDS )
 writeLines( "Eigenschaften:" )
 dsAttribs
 
+# Alternativ könnte man auch mit dem Befehl glimpse aus dem Paket tibble arbeiten
+#install.packages("tibble")
+glimpse(esoDS)
+
 writeLines( "" )
 
 # Mit nrow und ncol erhalten wir einen weiteren Einblick in den Umfang der
@@ -82,20 +86,11 @@ barPlotAlkohol <- barplot( table( esoDS$agegp, esoDS$alcgp ),
                            ylab = "Anzahl Datensätze",
                            main = "Verteilung Alkohol", legend = TRUE )
 
-writeLines( "Übersicht Anzahl über Alkoholgenuss, Alter." )
-writeLines( "Ausgabe im Fenster Plots und als Matrix auf der Konsole:" )
-barPlotAlkohol
-
 barPlotTabak <- barplot( table( esoDS$agegp, esoDS$tobgp ),
                          beside = TRUE,
                          xlab = "Tabakgenuss",
                          ylab = "Anzahl Datensätze",
                          main = "Verteilung Tabak", legend = TRUE )
-
-writeLines( "" )
-writeLines( "Übersicht Anzahl über Tabakgenuss, Alter." )
-writeLines( "Ausgabe im Fenster Plots und als Matrix auf der Konsole:" )
-barPlotTabak
 
 writeLines( "" )
 writeLines( "Abschließend das gesammte DataSet" )
