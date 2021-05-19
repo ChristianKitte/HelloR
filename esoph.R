@@ -38,6 +38,8 @@ dsAttribs <- attributes( esoDS )
 writeLines( "Eigenschaften:" )
 dsAttribs
 
+writeLines( "" )
+
 # Alternativ könnte man auch mit dem Befehl glimpse aus dem Paket tibble arbeiten
 #install.packages("tibble")
 glimpse(esoDS)
