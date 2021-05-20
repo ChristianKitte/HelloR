@@ -41,6 +41,7 @@ dsAttribs
 writeLines( "" )
 
 # Alternativ könnte man auch mit dem Befehl glimpse aus dem Paket tibble arbeiten
+# Achtung: In Packeges muss das Paket tibble aktiviert sein! Glimpse ist Teil hiervon.
 #install.packages("tibble")
 glimpse(esoDS)
 
